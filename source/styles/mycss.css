@@ -1,0 +1,411 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins&display=swap);
+
+.hamburger-menu {
+    right: auto;
+        position: absolute;
+    
+        z-index: 2;
+        
+}
+
+#menu__toggle {
+    opacity: 0;
+}
+
+#menu__toggle:checked+.menu__btn>span {
+    transform: rotate(45deg);
+}
+
+#menu__toggle:checked+.menu__btn>span::before {
+    top: 0;
+    transform: rotate(0deg);
+}
+
+#menu__toggle:checked+.menu__btn>span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu__toggle:checked~.menu__box {
+    right: 0 !important;
+}
+
+
+
+
+
+.menu__btn {
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    width: 26px;
+    height: 13px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #616161;
+    transition-duration: .25s;
+}
+
+.menu__btn>span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu__btn>span::after {
+    content: '';
+    top: 8px;
+}
+
+.menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #f6f6f6;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+}
+
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: Poppins, Verdana;
+    
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+}
+
+.menu__item-1 {
+    display: block;
+    padding: 12px 24px;
+    color: rgb(103, 103, 103);
+    font-family: Poppins, Verdana;
+
+    font-weight: 500;
+    text-decoration: none;
+    
+}
+
+.menu__item:hover {
+    
+    color: #f2b212;
+}
+
+body {
+    font-family: Poppins, Verdana;
+}
+
+@media (max-width: 900px) {
+    .nav-item {
+        width: 100%;
+        position:fixed;
+    }
+    
+}
+
+.navbar-brand {
+    margin-left: 2%;
+}
+
+.nav-link {
+    color: rgb(103, 55, 0);
+    font-family: Poppins, Verdana;
+    
+
+}
+
+.nav-link:active {
+    color: #ee6515;
+}
+
+.navbar-nav .nav-link.active {
+    color:#ffae00;
+    font-family: Poppins, Verdana;
+    
+    
+}
+
+.container-fluid a:hover {
+    background-color: rgb(237, 237, 237);
+
+}
+
+
+.navbar-brand img {
+    width: 40px;
+
+}
+
+.sidebar {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    
+}
+
+@media screen and (min-width:991.5px) {
+    .hamburger-menu {
+        display: none;
+    }
+}
+
+
+
+
+.card {
+    background-color: rgb(237, 237, 237);
+}
+
+.card a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: rgb(0, 0, 0);
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.sidebar {
+    /* don't forget to add all the previously mentioned styles here too */
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    transition: all 0.3s;
+   
+    position: fixed;
+    
+    height: 100%;
+    width: 300px;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgb(237, 237, 237);
+    overflow-x: hidden;
+    padding-top: 20px;
+    padding-left: 20px;
+    grid-row: 3/4;
+  
+    
+}
+
+@media (max-width: 1200px) {
+    .sidebar {
+        
+       width: 25%;
+       
+    }
+
+
+}
+
+@media (max-width: 991.5px) {
+    .sidebar {
+
+     display: none;
+
+    }
+
+
+}
+
+/*Тут пишем условия для маленьких разрешений монитора*/
+@media (max-width: 1000px) {
+    
+    .index-text {
+        text-align: center;
+        
+    }
+    
+}
+
+.sidebar .sidebar-header {
+    padding: 20px;
+    background: rgb(237, 237, 237);
+    color:#ffae00;
+    display: flex;
+    
+}
+
+.sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #290f04;
+    font-family: Poppins, Verdana;
+}
+
+.sidebar ul p {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+.sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    color: #000000;
+    background: rgb(255, 255, 255);
+}
+
+
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #ee6515;
+}
+
+.slide-text {
+    color: #000000;
+    margin: auto auto;
+}
+
+
+
+
+.text-block {
+    font-family: Poppins, Verdana;
+    margin-bottom: 60px;
+    margin-top: 10px;
+
+
+}
+
+.text-translate {
+    color: #767372;
+    font-size: 0.5cm;
+}
+
+
+.previous {
+    background-color: #f1f1f1;
+    color: black;
+    font-family: Poppins, Verdana;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+    margin-top: 20px;
+}
+
+a.previous:hover{
+    background-color: #ddd;
+    color: black;
+}
+
+.pomoch {
+    background-color: #ffffff;
+    margin-top: 6px;
+}
+
+.list-group-item {
+    background-color: #ffffff;
+}
+
+.slovosochit {
+    color: #767372;
+    
+ 
+}
+
+.slovosochit1 {
+    margin-top: 9px;
+    margin-bottom: none;
+    color: #e99d71;
+    font-style: oblique;
+    
+}
+
+.aboutwe {
+    margin-left: 9%;
+    color:#ee6515;
+}
+
+.info {
+    color: #ee6515;
+}
+
+.text-block-info {
+    
+    font-size: larger;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #000000;
+    font-style:oblique;
+
+}
+
+.card-text {
+    font-style: oblique;
+    color: #767372;
+    word-wrap: break-word
+}
+
+.index-text {
+    margin-top: 40px;
+    color: #ee6515;
+    font-style: oblique;
+    
+    margin-left: 2%;
+}
+
+.card-title-1 {
+    color: #ee6515;
+    font-size:x-large;
+}
+
+.card-text-1 {
+    color: #000000;
+}
+
+@media (max-width: 1000px) {
+    .carousel-indicators {
+        width: 100%;
+        display: none;
+    }
+}
+
+
+
+.egor {
+    cursor:auto;
+}
+
+a.egor:hover {
+    background-color: #ffffff;
+}
